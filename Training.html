@@ -1,0 +1,657 @@
+
+<!DOCTYPE html>
+<!--
+Template Name: Metronic - Bootstrap 4 HTML, React, Angular 9 & VueJS Admin Dashboard Theme
+Author: KeenThemes
+Website: http://www.keenthemes.com/
+Contact: support@keenthemes.com
+Follow: www.twitter.com/keenthemes
+Dribbble: www.dribbble.com/keenthemes
+Like: www.facebook.com/keenthemes
+Purchase: https://1.envato.market/EA4JP
+Renew Support: https://1.envato.market/EA4JP
+License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
+-->
+<html lang="en">
+	<!--begin::Head-->
+	<head><base href="">
+		<meta charset="utf-8" />
+		<title>Welding | Training </title>
+		<meta name="description" content="Updates and statistics" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<!--begin::Fonts-->
+		<link rel="stylesheet" href="https://ericsa2300.github.io/MetronicTemplate/Font.css"/>
+		<!--end::Fonts-->
+		<!--begin::Page Vendors Styles(used by this page)-->
+		<!-- <link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" /> -->
+		<!--end::Page Vendors Styles-->
+		<!--begin::Global Theme Styles(used by all pages)-->
+		<link href="https://ericsa2300.github.io/MetronicTemplate/plugins.bundle.css" rel="stylesheet" type="text/css"/>
+		<link href="https://ericsa2300.github.io/MetronicTemplate/prismjs.bundle.css" rel="stylesheet" type="text/css"/>
+		<link href="https://ericsa2300.github.io/MetronicTemplate/style.bundle.css" rel="stylesheet" type="text/css"/>
+		<link href="https://ericsa2300.github.io/MetronicTemplate/datatables.bundle.css" rel="stylesheet" type="text/css"/>
+		<!--end::Global Theme Styles-->
+		<!--end::Layout Themes-->
+		<link rel="shortcut icon" href="https://preview.keenthemes.com/metronic/theme/html/demo1/dist/assets/media/logos/favicon.ico" />
+
+		<!-- <script src="https://ericsa2300.github.io/MetronicTemplate/jquery_3.6.js"></script> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" type="text/javascript"></script>
+	</head>
+	<!--end::Head-->
+	<!--begin::Body-->
+	<body id="kt_body" class="header-fixed header-mobile-fixed sidebar-enabled page-loading">
+		<!--begin::Main-->
+		<!--begin::Header Mobile-->
+		<div id="kt_header_mobile" class="header-mobile header-mobile-fixed">
+			<!--begin::Logo-->
+			<a href="index.html">
+				<!-- <img alt="Logo" src="assets/media/logos/logo-letter-1.png" class="logo-default max-h-30px" /> -->
+				 <img style="height:30px;width:70px" src="data:image/png;base64,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" class="text-center">
+			</a>
+			<!--end::Logo-->
+			<!--begin::Toolbar-->
+			<div class="d-flex align-items-center">
+				<button class="btn p-0 burger-icon burger-icon-left rounded-0" id="kt_header_mobile_toggle" hidden="hidden">
+					<span></span>
+				</button>
+				<button class="btn btn-hover-text-primary p-0 ml-5" id="kt_sidebar_mobile_toggle" hidden="hidden">
+					<span class="svg-icon svg-icon-xl">
+						<!--begin::Svg Icon | path:assets/media/svg/icons/Design/Substract.svg-->
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+							<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+								<rect x="0" y="0" width="24" height="24" />
+								<path d="M6,9 L6,15 C6,16.6568542 7.34314575,18 9,18 L15,18 L15,18.8181818 C15,20.2324881 14.2324881,21 12.8181818,21 L5.18181818,21 C3.76751186,21 3,20.2324881 3,18.8181818 L3,11.1818182 C3,9.76751186 3.76751186,9 5.18181818,9 L6,9 Z" fill="#000000" fill-rule="nonzero" />
+								<path d="M10.1818182,4 L17.8181818,4 C19.2324881,4 20,4.76751186 20,6.18181818 L20,13.8181818 C20,15.2324881 19.2324881,16 17.8181818,16 L10.1818182,16 C8.76751186,16 8,15.2324881 8,13.8181818 L8,6.18181818 C8,4.76751186 8.76751186,4 10.1818182,4 Z" fill="#000000" opacity="0.3" />
+							</g>
+						</svg>
+						<!--end::Svg Icon-->
+					</span>
+				</button>
+				<button class="btn btn-hover-text-primary p-0 ml-2" id="kt_aside_mobile_toggle" >
+					<span class="svg-icon svg-icon-xl">
+						<!--begin::Svg Icon | path:assets/media/svg/icons/General/User.svg-->
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+							<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+								<rect x="0" y="0" width="24" height="24"></rect>
+								<path d="M10,4 L21,4 C21.5522847,4 22,4.44771525 22,5 L22,7 C22,7.55228475 21.5522847,8 21,8 L10,8 C9.44771525,8 9,7.55228475 9,7 L9,5 C9,4.44771525 9.44771525,4 10,4 Z M10,10 L21,10 C21.5522847,10 22,10.4477153 22,11 L22,13 C22,13.5522847 21.5522847,14 21,14 L10,14 C9.44771525,14 9,13.5522847 9,13 L9,11 C9,10.4477153 9.44771525,10 10,10 Z M10,16 L21,16 C21.5522847,16 22,16.4477153 22,17 L22,19 C22,19.5522847 21.5522847,20 21,20 L10,20 C9.44771525,20 9,19.5522847 9,19 L9,17 C9,16.4477153 9.44771525,16 10,16 Z" fill="#000000"></path>
+								<rect fill="#000000" opacity="0.3" x="2" y="4" width="5" height="16" rx="1"></rect>
+							</g>
+						</svg>
+						<!--end::Svg Icon-->
+					</span>
+				</button>
+				<button class="btn btn-hover-text-primary p-0 ml-2" onclick="Main.OpenFilter()" >
+					<span class="svg-icon svg-icon-xl">
+						<!--begin::Svg Icon | path:assets/media/svg/icons/General/User.svg-->
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+							<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+								<rect x="0" y="0" width="24" height="24"/>
+								<path d="M5,4 L19,4 C19.2761424,4 19.5,4.22385763 19.5,4.5 C19.5,4.60818511 19.4649111,4.71345191 19.4,4.8 L14,12 L14,20.190983 C14,20.4671254 13.7761424,20.690983 13.5,20.690983 C13.4223775,20.690983 13.3458209,20.6729105 13.2763932,20.6381966 L10,19 L10,12 L4.6,4.8 C4.43431458,4.5790861 4.4790861,4.26568542 4.7,4.1 C4.78654809,4.03508894 4.89181489,4 5,4 Z" fill="#000000"/>
+							</g>
+						</svg>
+						<!--end::Svg Icon-->
+					</span>
+				</button>
+			</div>
+			<!--end::Toolbar-->
+		</div>
+		<!--end::Header Mobile-->
+		<div class="d-flex flex-column flex-root">
+			<!--begin::Page-->
+			<div class="d-flex flex-row flex-column-fluid page">
+				<!--begin::Aside-->
+				<div class="aside aside-left d-flex flex-column" id="kt_aside" hidden="hidden">
+					<!--begin::Brand-->
+					<div class="aside-brand d-flex flex-column align-items-center flex-column-auto py-9">
+						<!--begin::Logo-->
+						<div class="btn p-0 symbol symbol-40 symbol-success" href="?page=index" id="kt_quick_user_toggle">
+							<div class="symbol-label">
+								<span class="symbol-label font-size-h5 font-weight-bold">W</span>
+							</div>
+						</div>
+						<!--end::Logo-->
+					</div>
+					<!--end::Brand-->
+					<!--begin::Nav Wrapper-->
+					<div class="aside-nav d-flex flex-column align-items-center flex-column-fluid pb-10">
+						<!--begin::Nav-->
+						<ul class="nav flex-column">
+							<!--begin::Item-->
+							<li class="nav-item mb-2" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="Dashboard">
+								<a href="#" class="nav-link btn btn-icon btn-lg btn-borderless active">
+									<span class="svg-icon svg-icon-xxl">
+										<!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
+										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+											<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+												<rect x="0" y="0" width="24" height="24" />
+												<rect fill="#000000" x="4" y="4" width="7" height="7" rx="1.5" />
+												<path d="M5.5,13 L9.5,13 C10.3284271,13 11,13.6715729 11,14.5 L11,18.5 C11,19.3284271 10.3284271,20 9.5,20 L5.5,20 C4.67157288,20 4,19.3284271 4,18.5 L4,14.5 C4,13.6715729 4.67157288,13 5.5,13 Z M14.5,4 L18.5,4 C19.3284271,4 20,4.67157288 20,5.5 L20,9.5 C20,10.3284271 19.3284271,11 18.5,11 L14.5,11 C13.6715729,11 13,10.3284271 13,9.5 L13,5.5 C13,4.67157288 13.6715729,4 14.5,4 Z M14.5,13 L18.5,13 C19.3284271,13 20,13.6715729 20,14.5 L20,18.5 C20,19.3284271 19.3284271,20 18.5,20 L14.5,20 C13.6715729,20 13,19.3284271 13,18.5 L13,14.5 C13,13.6715729 13.6715729,13 14.5,13 Z" fill="#000000" opacity="0.3" />
+											</g>
+										</svg>
+										<!--end::Svg Icon-->
+									</span>
+								</a>
+							</li>
+							<!--end::Item-->
+							<!--end::Item-->
+						</ul>
+						<!--end::Nav-->
+					</div>
+					<!--end::Nav Wrapper-->
+					<!--begin::Footer-->
+					<div class="aside-footer d-flex flex-column align-items-center flex-column-auto py-8">
+						<!--begin::Notifications-->
+						<!-- <a href="#" class="btn btn-icon btn-lg btn-borderless mb-1 position-relative" id="kt_quick_notifications_toggle" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="Notifications">
+							<span class="svg-icon svg-icon-xxl">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+									<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+										<polygon points="0 0 24 0 24 24 0 24" />
+										<path d="M12.9336061,16.072447 L19.36,10.9564761 L19.5181585,10.8312381 C20.1676248,10.3169571 20.2772143,9.3735535 19.7629333,8.72408713 C19.6917232,8.63415859 19.6104327,8.55269514 19.5206557,8.48129411 L12.9336854,3.24257445 C12.3871201,2.80788259 11.6128799,2.80788259 11.0663146,3.24257445 L4.47482784,8.48488609 C3.82645598,9.00054628 3.71887192,9.94418071 4.23453211,10.5925526 C4.30500305,10.6811601 4.38527899,10.7615046 4.47382636,10.8320511 L4.63,10.9564761 L11.0659024,16.0730648 C11.6126744,16.5077525 12.3871218,16.5074963 12.9336061,16.072447 Z" fill="#000000" fill-rule="nonzero" />
+										<path d="M11.0563554,18.6706981 L5.33593024,14.122919 C4.94553994,13.8125559 4.37746707,13.8774308 4.06710397,14.2678211 C4.06471678,14.2708238 4.06234874,14.2738418 4.06,14.2768747 L4.06,14.2768747 C3.75257288,14.6738539 3.82516916,15.244888 4.22214834,15.5523151 C4.22358765,15.5534297 4.2250303,15.55454 4.22647627,15.555646 L11.0872776,20.8031356 C11.6250734,21.2144692 12.371757,21.2145375 12.909628,20.8033023 L19.7677785,15.559828 C20.1693192,15.2528257 20.2459576,14.6784381 19.9389553,14.2768974 C19.9376429,14.2751809 19.9363245,14.2734691 19.935,14.2717619 L19.935,14.2717619 C19.6266937,13.8743807 19.0546209,13.8021712 18.6572397,14.1104775 C18.654352,14.112718 18.6514778,14.1149757 18.6486172,14.1172508 L12.9235044,18.6705218 C12.377022,19.1051477 11.6029199,19.1052208 11.0563554,18.6706981 Z" fill="#000000" opacity="0.3" />
+									</g>
+								</svg>
+							</span>
+							<span class="label label-sm label-light-danger label-rounded font-weight-bolder position-absolute top-0 right-0 mt-1 mr-1">3</span>
+						</a> -->
+						<!--end::Notifications-->
+						<!--end::Quick Panel-->
+						<!--begin::Languages-->
+						<!--end::Languages-->
+					</div>
+					<!--end::Footer-->
+				</div>
+				<!--end::Aside-->
+				<!--begin::Wrapper-->
+				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+					<!--begin::Isi Dalam-->
+					
+					<!--begin::Content-->
+					<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+						<!--begin::Entry-->
+						<div class="d-flex flex-column-fluid">
+							<!--begin::Container-->
+							<div class="container">
+								<!--begin::Dashboard-->
+
+								<div class="row mt-5">
+                                    <div class="col-lg-12 col-xxl-3 order-1 order-xxl-2" id="SearchDiv" hidden="hidden">
+										<!--begin::List Widget 8-->
+										<div class="form-group" style="margin-bottom: 0.1rem;">
+                                            <label>Search<span class="text-danger">*</span></label>
+                                            <select class="form-control cbb" id="cbbEmployee" style="width: 100%;" onchange="Training.OnchangeEmployee()"></select>
+                                        </div>
+										<!--end: Card-->
+										<!--end::List Widget 8-->
+									</div>
+                                </div>
+
+								<!-- Start : div row untuk mobile -->
+
+								<div class="row mt-5" id="TrainingPanel">
+									<div class="col-lg-12">
+										<div id="MobileTrainingPanel" class="row">
+											<!-- <div class="mobileViewTraining card card-custom card-stretch gutter-b bg-light-success ml-2 mr-2" style="margin-bottom: 10px">
+												<div class="card-body pt-4">
+													<div class="d-flex flex-wrap align-items-center mb-1">
+														<div class="symbol symbol-30 symbol-2by3 flex-shrink-0">
+															<div class="symbol-label"><span class="symbol-label text-bold font-size-h4">ES</span></div>
+														</div>
+														<div class="d-flex flex-column ml-4 flex-grow-1 mr-2">
+															<span class="text-primary font-weight-bold font-size-h6">Eric Saputra</span>
+															<span class="text-muted font-weight-bold ">12 Apr 2022 ~ 12 Apr 2023</span>
+														</div>
+														<span class="label label-lg label-success label-inline mt-lg-0 mb-lg-0 my-2 font-weight-bold py-4">ON</span>
+														<div class="col-12 mt-2" style="padding-right: 0px;padding-left: 0px;">
+															<div class="d-flex flex-column flex-grow-1 mr-1">
+																<span class="text-primary font-weight-bolder font-size-h6">Subject</span>
+																<span class="text-dark font-weight-normal">Basic Fire Fighting Training</span>
+															</div>
+														</div>
+														<div class="col-12" style="padding-right: 0px;padding-left: 0px;"> 
+															<div class="row">
+																<div class="col-3">
+																	<div class="d-flex flex-column flex-grow-1 mr-1 mt-2">
+																		<span class="text-primary font-weight-bolder font-size-h6">Class</span>
+																		<span class="text-dark font-weight-normal">Internal</span>
+																	</div>
+																</div>
+																<div class="col-5" >
+																	<div class="d-flex flex-column flex-grow-1 mr-1 mt-2">
+																		<span class="text-primary font-weight-bolder font-size-h6">Institution</span>
+																		<span class="text-dark font-weight-normal">LSP ENERGI, BNSP</span>
+																	</div>
+																</div>
+										
+																<div class="col-4">
+																	<div class="d-flex flex-column flex-grow-1 mr-1 mt-2">
+																		<span class="text-primary font-weight-bolder font-size-h6">Company</span>
+																		<span class="text-dark font-weight-normal">Profab</span>
+																	</div>
+																</div>
+																
+																
+															</div>
+														   
+														</div>
+														
+													</div>
+												</div>
+											</div> -->
+										</div>
+									</div>
+									
+									<div class="col-lg-12 DekstopViewTraining" hidden="hidden">
+										<!--begin::Advance Table Widget 4-->
+										<div class="card card-custom card-stretch gutter-b">
+											<div class="card-body pt-2 pb-3 mt-5">
+												<div class="tab-content">
+													<!--begin::Table-->
+													<table id="TrainingTable" class="table table-separate table-head-custom table-foot-custom table-checkable">
+														<thead>
+															<tr style="color: #fff; background-color: #187c7c; border-color: Transparent; font-weight: bold;">
+																<th>Badge Id</th>
+																<th>Emp Name</th>
+																<th>Subject</th>
+																<th>Class</th>
+																<th>Start Date</th>
+																<th>Expired Date</th>
+																<th>Institution</th>
+																<th>Company</th>
+																<th>Status</th>
+															</tr>
+														</thead>
+														<tbody>
+														</tbody>
+													</table>
+													<!--end::Table-->
+												</div>
+											</div>
+											<!--end::Body-->
+										</div>
+										<!--end::Advance Table Widget 4-->
+									</div>
+								</div>
+								<!-- End : div row untuk mobile -->
+								<!--end::Dashboard-->
+							</div>
+							<!--end::Container-->
+						</div>
+						<!--end::Entry-->
+					</div>
+					<!--end::Isi Dalam-->
+					<!--begin::Footer-->
+					<div class="footer py-2 py-lg-0 my-5 d-flex flex-lg-column" id="kt_footer">
+						<!--begin::Container-->
+						<div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between">
+							<!--begin::Copyright-->
+							<div class="text-dark order-2 order-md-1">
+								<span class="text-muted font-weight-bold mr-2">2024©</span>
+								<a href="http://keenthemes.com/metronic" target="_blank" class="text-dark-75 text-hover-primary">NOV Profab</a>
+							</div>
+							<!--end::Copyright-->
+						</div>
+						<!--end::Container-->
+					</div>
+					<!--end::Footer-->
+				</div>
+				<!--end::Wrapper-->
+				<!--begin::Aside Secondary-->
+				<!--end::Aside Secondary-->
+			</div>
+			<!--end::Page-->
+		</div>
+		<!--end::Main-->
+		<!-- begin::Notifications Panel-->
+		<!-- end::Notifications Panel-->
+		<!--begin::Quick Actions Panel-->
+		<!--end::Quick Actions Panel-->
+		<!-- begin::User Panel-->
+		<!-- end::User Panel-->
+		<!--begin::Quick Panel-->
+		<!--end::Quick Panel-->
+		<!--begin::Chat Panel-->
+		<!--end::Chat Panel-->
+		<!--begin::Scrolltop-->
+		<div id="kt_scrolltop" class="scrolltop">
+			<span class="svg-icon">
+				<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Up-2.svg-->
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+					<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						<polygon points="0 0 24 0 24 24 0 24" />
+						<rect fill="#000000" opacity="0.3" x="11" y="10" width="2" height="10" rx="1" />
+						<path d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586 L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z" fill="#000000" fill-rule="nonzero" />
+					</g>
+				</svg>
+				<!--end::Svg Icon-->
+			</span>
+		</div>
+		<!--end::Scrolltop-->
+		<script>var HOST_URL = "https://keenthemes.com/metronic/tools/preview";</script>
+		<!--begin::Global Config(global config for global JS scripts)-->
+		<script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1200 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#663259", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#F3F6F9", "dark": "#212121" }, "light": { "white": "#ffffff", "primary": "#F4E1F0", "secondary": "#ECF0F3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#212121", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#ECF0F3", "gray-300": "#E5EAEE", "gray-400": "#D6D6E0", "gray-500": "#B5B5C3", "gray-600": "#80808F", "gray-700": "#464E5F", "gray-800": "#1B283F", "gray-900": "#212121" } }, "font-family": "Poppins" };</script>
+		<!--end::Global Config-->
+		<!--begin::Global Theme Bundle(used by all pages)-->
+		<script src="https://ericsa2300.github.io/MetronicTemplate/plugins.bundle.js"></script>
+		<script src="https://ericsa2300.github.io/MetronicTemplate/prismjs.bundle.js"></script>
+		<script src="https://ericsa2300.github.io/MetronicTemplate/scripts.bundle.js"></script>
+		<script src="https://ericsa2300.github.io/MetronicTemplate/bootstrap-datepicker.js"></script>
+		<script src="https://ericsa2300.github.io/MetronicTemplate/bootstrap-timepicker.js"></script>
+		<script src="https://ericsa2300.github.io/MetronicTemplate/select2.js"></script>
+		<script src="https://ericsa2300.github.io/MetronicTemplate/datatables.bundle.js"></script>
+		<script src="https://ericsa2300.github.io/MetronicTemplate/blockui.js"></script>
+		<script src="https://ericsa2300.github.io/MetronicTemplate/widgets.js"></script>
+		<script src="https://ericsa2300.github.io/MetronicTemplate/Notification.js"></script>
+		<!--end::Page Scripts-->
+
+		<script>
+
+			$(document).ready(function () {
+				Main.OpenFilter()
+				Main.RotationView()
+				Training.initialTable()
+				Training.GetData()
+
+
+			});
+
+
+
+			function Main(){}
+
+
+
+			Main.RotationView =  function(){
+				var w = screen.width;
+                if (parseInt(w) < 700) // mobile mode
+                {
+                    $('.mobileViewWelding').removeAttr('hidden')
+					$('.DekstopViewWelding').attr('hidden','hidden')
+
+					$('.mobileViewTraining').removeAttr('hidden')
+					$('.DekstopViewTraining').attr('hidden','hidden')
+					
+                }
+                else // web mode
+                {
+					$('#SearchDiv').removeAttr('hidden')
+                    Main.IsFilter = 1
+
+                    $('.DekstopViewWelding').removeAttr('hidden')
+					$('.mobileViewWelding').attr('hidden','hidden')
+
+					$('.DekstopViewTraining').removeAttr('hidden')
+					$('.mobileViewTraining').attr('hidden','hidden')
+                }
+			}
+			
+			Main.IsFilter = 0
+            Main.OpenFilter = function () {
+                if (Main.IsFilter == 0) {
+                    $('#SearchDiv').removeAttr('hidden')
+                    Main.IsFilter = 1
+                    // $('#btnFilter').removeClass('btn btn-icon btn-light-white h-40px w-40px').addClass('btn btn-icon btn-primary h-40px w-40px')
+                }
+                else {
+                    $('#SearchDiv').attr('hidden', 'hidden')
+                    Main.IsFilter = 0
+                    // $('#btnFilter').removeClass('btn btn-icon btn-primary h-40px w-40px').addClass('btn btn-icon btn-light-white h-40px w-40px')
+                }
+            }
+			
+	
+
+			function Training(){}
+
+
+			
+			Training.Data = []
+			Training.GetData = function(){
+                Loading.BlockPage()
+                fetch("https://script.google.com/macros/s/AKfycbxYBfMpF_Zc8bjLoU_y8x5OnimqlWisEc-nK02VsSPCCyzlyN4Dy-Dmxvm9GQrAnnOYhw/exec")
+                    .then(res => res.json())
+                    .then(data => {
+                        Training.Data = data.TrainingData
+                        
+						Training.GetBadgeId()
+                        Loading.UnblockPage_()
+                    });
+            }
+
+            Training.GetBadgeId = function(){
+                var datas  = Training.Data
+                //distinct array with single value
+                //let BadgeId = [...new Set(datas.map(item => item.BadgeId))];
+                //console.log(BadgeId);
+            
+                //distinct array with multiple value
+                let result = datas.reduce((prev, el) =>{
+                    if(prev.some(o => o.BadgeId == el.BadgeId && o.EmployeeName == el.EmployeeName))
+                        return prev;
+                    return [...prev, {BadgeId:el.BadgeId, EmployeeName:el.EmployeeName}]
+                }, []);
+
+                var cbbEmployee = $('#cbbEmployee');
+                cbbEmployee.empty();
+                cbbEmployee.append("<option value=''>Choose Employee</option>");
+
+                $.each(result, function (i, st) {
+					if(st.BadgeId != undefined){
+						cbbEmployee.append("<option value=\"" + st.BadgeId + "\">" + st.BadgeId + "-" + st.EmployeeName + "</option>")
+					}
+                    
+                })
+                console.log(result);
+            }
+
+            Training.OnchangeEmployee = function(){
+                
+                var BadgeId = $('#cbbEmployee').val()
+				console.log(BadgeId)
+				if(BadgeId !='' && BadgeId != null){
+					Training.GetDataPerBadgeId(BadgeId)
+				}
+                
+            }
+
+
+			Training.mDataTable = null;
+			Training.initialTable = function () {
+				var options = {
+					"searching": false,
+					paging: false,
+					responsive: true,
+					scrollX: true,
+					"initComplete": function (settings, json) {
+						$("#TrainingTable").wrap("<div style='overflow:auto;height:630px; width:100%;position:relative;'></div>");
+					},
+					columns: [
+						{ "data": "BadgeId" },
+						{ "data": "EmployeeName" },
+						{ "data": "TrainingDescription" },
+						{ "data": "TrainingType" },
+						{ "data": "StartDate" },
+						{ "data": "EndDate" },
+						{ "data": "Institution" },
+						{ "data": "Company" },
+						{ "data": "Status" },
+					],
+					columnDefs: [
+						{
+							targets: 4,
+							width: '150px',
+							className: 'dt-left',
+							orderable: false,
+							//visible: false,
+							render: function (data, type, full, meta) {
+
+								var html = ' <span class="label label-lg label-primary label-inline" style="width:150px">' + ConvertDate(full.StartDate) + '</span>'
+								return html
+							},
+						},
+						{
+							targets: 5,
+							width: '150px',
+							className: 'dt-left',
+							orderable: false,
+							//visible: false,
+							render: function (data, type, full, meta) {
+
+								var html = ' <span class="label label-lg label-primary label-inline" style="width:150px">' + ConvertDate(full.EndDate) + '</span>'
+								return html
+							},
+						},
+						{
+							targets: 8,
+							width: '50px',
+							className: 'dt-left',
+							orderable: false,
+							//visible: false,
+							render: function (data, type, full, meta) {
+								var backgroundColor = ""
+								var StatusCode = 'OFF'
+								if (full.Status == 'ACTIVE' && CheckisExpired(full.EndDate) == 0) {
+									backgroundColor = 'success'
+									StatusCode = 'ON'
+								}
+								else {
+									StatusCode = 'OFF'
+									backgroundColor = 'danger'
+								} 
+								var html = ' <span class="label label-lg label-' + backgroundColor +' label-inline" style="width:50px">' + StatusCode + '</span>'
+								return html
+							},
+						},
+
+					],
+					dom: 'rtip',
+					buttons: [
+						'excel'
+					]
+				}
+
+				var Table = $('#TrainingTable').DataTable(options);
+				Training.mDataTable = Table;
+
+			}
+
+
+			Training.GetDataPerBadgeId = function(BadgeId){
+                Loading.BlockPage()
+                var datas  = Training.Data
+                var AfterFilter =  datas.filter(function(datas) {
+                    return datas.BadgeId == BadgeId;
+                });
+
+
+                // $('#SpanEmployeeNumber').html(AfterFilter[0].BadgeId+'-'+AfterFilter[0].WelderName+' ['+AfterFilter[0].StampNumber+']')
+				
+				
+                var MobileTrainingPanel = $('#MobileTrainingPanel');
+                MobileTrainingPanel.empty();
+                var html= ''
+                $.each(AfterFilter, function (i, st) {
+                    var Color = 'success'
+                    if(CheckisExpired(st.EndDate) == 1){
+                        Color = 'danger'
+                    }
+
+					var StatusCode = 'EXPIRED'
+                    if(st.Status == 'ACTIVE' && CheckisExpired(st.EndDate) == 0){
+                        StatusCode = 'ACTIVE'
+                    }
+				
+					html +='<div class="mobileViewTraining card card-custom card-stretch gutter-b bg-light-'+Color+' ml-2 mr-2" style="margin-bottom: 10px">'
+							html +='<div class="card-body pt-4">'
+								html +='<div class="d-flex flex-wrap align-items-center mb-1">'
+									// html +='<div class="symbol symbol-30 symbol-2by3 flex-shrink-0">'
+									// 	html +='<div class="symbol-label"><span class="symbol-label text-bold font-size-h4">ES</span></div>'
+									// html +='</div>'
+									html +='<div class="d-flex flex-column ml-4 flex-grow-1 mr-2">'
+										html +='<span class="text-primary font-weight-bold font-size-h6">'+st.EmployeeName+'</span>'
+										html +='<span class="text-muted font-weight-bold ">'+ConvertDate(st.StartDate)+' ~ '+ConvertDate(st.EndDate)+'</span>'
+									html +='</div>'
+									html +='<span class="label label-lg label-'+Color+' label-inline mt-lg-0 mb-lg-0 my-2 font-weight-bold py-4">'+StatusCode+'</span>'
+									html +='<div class="col-12 mt-2" style="padding-right: 0px;padding-left: 0px;">'
+										html +='<div class="d-flex flex-column flex-grow-1 mr-1">'
+											html +='<span class="text-primary font-weight-bolder font-size-h6">Subject</span>'
+											html +='<span class="text-dark font-weight-normal">'+st.TrainingDescription+'</span>'
+										html +='</div>'
+									html +='</div>'
+									html +='<div class="col-12" style="padding-right: 0px;padding-left: 0px;">'
+										html +='<div class="row">'
+											html +='<div class="col-3">'
+												html +='<div class="d-flex flex-column flex-grow-1 mr-1 mt-2">'
+													html +='<span class="text-primary font-weight-bolder font-size-h6">Class</span>'
+													html +='<span class="text-dark font-weight-normal">'+st.TrainingType+'</span>'
+												html +='</div>'
+											html +='</div>'
+											html +='<div class="col-5" >'
+												html +='<div class="d-flex flex-column flex-grow-1 mr-1 mt-2">'
+													html +='<span class="text-primary font-weight-bolder font-size-h6">Institution</span>'
+													html +='<span class="text-dark font-weight-normal">'+st.Institution+'</span>'
+												html +='</div>'
+											html +='</div>'
+											html +='<div class="col-4">'
+												html +='<div class="d-flex flex-column flex-grow-1 mr-1 mt-2">'
+													html +='<span class="text-primary font-weight-bolder font-size-h6">Company</span>'
+													html +='<span class="text-dark font-weight-normal">'+st.Company+'</span>'
+												html +='</div>'
+											html +='</div>'
+										html +='</div>'
+									html +='</div>'
+								html +='</div>'
+							html +='</div>'
+						html +='</div>'
+
+                })
+                MobileTrainingPanel.append(html)
+
+
+				Training.mDataTable.clear();
+                $.each(AfterFilter, function (i, st) {
+                    Training.mDataTable.row.add(st);
+                })
+                Training.mDataTable.draw();
+
+				Main.RotationView()
+                console.log(AfterFilter);
+                Loading.UnblockPage_()
+            }
+
+        
+            function ConvertDate(Dates){
+				if(Dates != ''){
+					var now = new Date(Dates)
+					var mon = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+					return (now.getDate()  + ' ' + mon[now.getMonth()] + ' ' + now.getFullYear())
+				}
+				else
+				{
+					return 'unlimited'
+				}
+                
+            }
+
+            function CheckisExpired(Dates){
+				var isExpired = 0
+				if(Dates != ''){
+					var value = new Date(Dates)
+					var now = new Date()
+
+					
+					if(value < now)
+					{
+						isExpired =1
+					}
+				}
+                
+
+                return isExpired
+            }
+
+
+		</script>
+	</body>
+	<!--end::Body-->
+</html>
