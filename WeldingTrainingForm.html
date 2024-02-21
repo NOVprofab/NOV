@@ -173,26 +173,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="container">
 								<!--begin::Dashboard-->
 								<!--begin::Row-->
-								<div class="row mt-0 mt-lg-8" style="margin-top: 0.3rem !important;">
-									<div class="col-xl-12">
-										<ul class="nav nav-tabs nav-bold nav-tabs-line">
-											<li class="nav-item">
-												<a class="nav-link active" data-toggle="tab" href="#" onclick="Main.SwitchTab('Welding')">
-													<span class="nav-text">Welding</span>
-												</a>
-											</li>
-											<li class="nav-item">
-												<a class="nav-link" data-toggle="tab" href="#" onclick="Main.SwitchTab('Training')">
-													<span class="nav-text">Training</span>
-												</a>
-											</li>
-										
-										</ul>
 
-									</div>
-
-									
-								</div>
 								<!--end::Row-->
 
 								<div class="row mt-5">
@@ -315,90 +296,6 @@ License: You must have a valid license purchased only from themeforest(the above
 										<!--end::Advance Table Widget 4-->
 									</div>
 								</div>
-								<div class="row mt-5" id="TrainingPanel" hidden="hidden">
-									<div class="col-lg-12">
-										<div id="MobileTrainingPanel" class="row">
-											<!-- <div class="mobileViewTraining card card-custom card-stretch gutter-b bg-light-success ml-2 mr-2" style="margin-bottom: 10px">
-												<div class="card-body pt-4">
-													<div class="d-flex flex-wrap align-items-center mb-1">
-														<div class="symbol symbol-30 symbol-2by3 flex-shrink-0">
-															<div class="symbol-label"><span class="symbol-label text-bold font-size-h4">ES</span></div>
-														</div>
-														<div class="d-flex flex-column ml-4 flex-grow-1 mr-2">
-															<span class="text-primary font-weight-bold font-size-h6">Eric Saputra</span>
-															<span class="text-muted font-weight-bold ">12 Apr 2022 ~ 12 Apr 2023</span>
-														</div>
-														<span class="label label-lg label-success label-inline mt-lg-0 mb-lg-0 my-2 font-weight-bold py-4">ON</span>
-														<div class="col-12 mt-2" style="padding-right: 0px;padding-left: 0px;">
-															<div class="d-flex flex-column flex-grow-1 mr-1">
-																<span class="text-primary font-weight-bolder font-size-h6">Subject</span>
-																<span class="text-dark font-weight-normal">Basic Fire Fighting Training</span>
-															</div>
-														</div>
-														<div class="col-12" style="padding-right: 0px;padding-left: 0px;"> 
-															<div class="row">
-																<div class="col-3">
-																	<div class="d-flex flex-column flex-grow-1 mr-1 mt-2">
-																		<span class="text-primary font-weight-bolder font-size-h6">Class</span>
-																		<span class="text-dark font-weight-normal">Internal</span>
-																	</div>
-																</div>
-																<div class="col-5" >
-																	<div class="d-flex flex-column flex-grow-1 mr-1 mt-2">
-																		<span class="text-primary font-weight-bolder font-size-h6">Institution</span>
-																		<span class="text-dark font-weight-normal">LSP ENERGI, BNSP</span>
-																	</div>
-																</div>
-										
-																<div class="col-4">
-																	<div class="d-flex flex-column flex-grow-1 mr-1 mt-2">
-																		<span class="text-primary font-weight-bolder font-size-h6">Company</span>
-																		<span class="text-dark font-weight-normal">Profab</span>
-																	</div>
-																</div>
-																
-																
-															</div>
-														   
-														</div>
-														
-													</div>
-												</div>
-											</div> -->
-										</div>
-									</div>
-									
-									<div class="col-lg-12 DekstopViewTraining" hidden="hidden">
-										<!--begin::Advance Table Widget 4-->
-										<div class="card card-custom card-stretch gutter-b">
-											<div class="card-body pt-2 pb-3 mt-5">
-												<div class="tab-content">
-													<!--begin::Table-->
-													<table id="TrainingTable" class="table table-separate table-head-custom table-foot-custom table-checkable">
-														<thead>
-															<tr style="color: #fff; background-color: #187c7c; border-color: Transparent; font-weight: bold;">
-																<th>Badge Id</th>
-																<th>Emp Name</th>
-																<th>Subject</th>
-																<th>Class</th>
-																<th>Start Date</th>
-																<th>Expired Date</th>
-																<th>Institution</th>
-																<th>Company</th>
-																<th>Status</th>
-															</tr>
-														</thead>
-														<tbody>
-														</tbody>
-													</table>
-													<!--end::Table-->
-												</div>
-											</div>
-											<!--end::Body-->
-										</div>
-										<!--end::Advance Table Widget 4-->
-									</div>
-								</div>
 								<!-- End : div row untuk mobile -->
 								<!--end::Dashboard-->
 							</div>
@@ -474,12 +371,9 @@ License: You must have a valid license purchased only from themeforest(the above
 		<script>
 
 			$(document).ready(function () {
-				Main.SwitchTab('Welding')
 				Main.RotationView()
 				Welding.initialTable()
-				Training.initialTable()
-				Welding.mmEmployee()
-				//Welding.GetData()
+				Welding.GetData()
 
 
 			});
@@ -496,9 +390,6 @@ License: You must have a valid license purchased only from themeforest(the above
                 {
                     $('.mobileViewWelding').removeAttr('hidden')
 					$('.DekstopViewWelding').attr('hidden','hidden')
-
-					$('.mobileViewTraining').removeAttr('hidden')
-					$('.DekstopViewTraining').attr('hidden','hidden')
 					
                 }
                 else // web mode
@@ -508,28 +399,10 @@ License: You must have a valid license purchased only from themeforest(the above
 
                     $('.DekstopViewWelding').removeAttr('hidden')
 					$('.mobileViewWelding').attr('hidden','hidden')
-
-					$('.DekstopViewTraining').removeAttr('hidden')
-					$('.mobileViewTraining').attr('hidden','hidden')
                 }
 			}
 			
 
-			Main.SwitchTab =  function(FormName){
-                if (FormName == 'Welding') // Welding Tab
-                {
-                    $('#WeldingPanel').removeAttr('hidden')
-					$('#TrainingPanel').attr('hidden','hidden')
-					Welding.OnchangeEmployee()
-                }
-                else // Training Tab
-                {
-                    $('#TrainingPanel').removeAttr('hidden')
-					$('#WeldingPanel').attr('hidden','hidden')
-					Welding.OnchangeEmployee()
-                }
-				Main.RotationView()
-			}
 			
 			Main.IsFilter = 0
             Main.OpenFilter = function () {
@@ -548,27 +421,6 @@ License: You must have a valid license purchased only from themeforest(the above
 			function Welding(){}
 			Welding.Data = []
 
-			Welding.mmEmployee = function(){
-                Loading.BlockPage()
-				var cbbEmployee = $('#cbbEmployee');
-                cbbEmployee.empty();
-                cbbEmployee.append("<option value=''>Choose Employee</option>");
-                fetch("https://script.google.com/macros/s/AKfycbxjoeXMhu-H-zBfAoWeNzq1qHoWVUEY1vTTUdNM5RC87fRv9OUhNF_o_hN_FfcKdTkIBQ/exec")
-                    .then(res => res.json())
-                    .then(data => {
-						console.log(data)
-						$.each(data.mmEmployee, function (i, st) {
-							if(st.BadgeId != undefined && i > 0 ){
-								cbbEmployee.append("<option value=\"" + st.BadgeId + "\">" + st.BadgeId + "-" + st.EmployeeName + "</option>")
-							}
-							
-						})
-                        Loading.UnblockPage_()
-						Welding.GetData()
-                    });
-            }
-
-
             Welding.GetData = function(){
                 Loading.BlockPage()
                 fetch("https://script.google.com/macros/s/AKfycbx6L_kCm8rX4cTj1kAqwfvfmCerb5acqgCrIOekbcbGQZsT8sVsQ33FcPg3uBVxGpoE/exec")
@@ -576,21 +428,11 @@ License: You must have a valid license purchased only from themeforest(the above
                     .then(data => {
                         Welding.Data = data.tWeldingCertificate
                         console.log(Welding.Data)
-                        //Welding.GetBadgeId()
-                        
-
+                        Welding.GetBadgeId()
                         Loading.UnblockPage_()
-						Training.GetData()
                     });
             }
 
-
-
-			
-
-
-			
-			
         
             Welding.GetBadgeId = function(){
                 var datas  = Welding.Data
@@ -624,11 +466,9 @@ License: You must have a valid license purchased only from themeforest(the above
 				console.log(BadgeId)
 				if(BadgeId !='' && BadgeId != null){
 					Welding.GetDataPerBadgeId(BadgeId)
-					Training.GetDataPerBadgeId(BadgeId)
 				}
                 
             }
-        
         
             Welding.GetDataPerBadgeId = function(BadgeId){
                 Loading.BlockPage()
@@ -808,212 +648,34 @@ License: You must have a valid license purchased only from themeforest(the above
 			}
 
 
-			function Training(){}
-
-
-			Training.mDataTable = null;
-			Training.initialTable = function () {
-				var options = {
-					"searching": false,
-					paging: false,
-					responsive: true,
-					scrollX: true,
-					"initComplete": function (settings, json) {
-						$("#TrainingTable").wrap("<div style='overflow:auto;height:630px; width:100%;position:relative;'></div>");
-					},
-					columns: [
-						{ "data": "BadgeId" },
-						{ "data": "EmployeeName" },
-						{ "data": "TrainingDescription" },
-						{ "data": "TrainingType" },
-						{ "data": "StartDate" },
-						{ "data": "EndDate" },
-						{ "data": "Institution" },
-						{ "data": "Company" },
-						{ "data": "Status" },
-					],
-					columnDefs: [
-						{
-							targets: 4,
-							width: '150px',
-							className: 'dt-left',
-							orderable: false,
-							//visible: false,
-							render: function (data, type, full, meta) {
-
-								var html = ' <span class="label label-lg label-primary label-inline" style="width:150px">' + ConvertDate(full.StartDate) + '</span>'
-								return html
-							},
-						},
-						{
-							targets: 5,
-							width: '150px',
-							className: 'dt-left',
-							orderable: false,
-							//visible: false,
-							render: function (data, type, full, meta) {
-
-								var html = ' <span class="label label-lg label-primary label-inline" style="width:150px">' + ConvertDate(full.EndDate) + '</span>'
-								return html
-							},
-						},
-						{
-							targets: 8,
-							width: '50px',
-							className: 'dt-left',
-							orderable: false,
-							//visible: false,
-							render: function (data, type, full, meta) {
-								var backgroundColor = ""
-								var StatusCode = 'OFF'
-								if (full.Status == 'ACTIVE' && CheckisExpired(full.EndDate) == 0) {
-									backgroundColor = 'success'
-									StatusCode = 'ON'
-								}
-								else {
-									StatusCode = 'OFF'
-									backgroundColor = 'danger'
-								} 
-								var html = ' <span class="label label-lg label-' + backgroundColor +' label-inline" style="width:50px">' + StatusCode + '</span>'
-								return html
-							},
-						},
-
-					],
-					dom: 'rtip',
-					buttons: [
-						'excel'
-					]
-				}
-
-				var Table = $('#TrainingTable').DataTable(options);
-				Training.mDataTable = Table;
-
-			}
-
-			Training.Data = []
-			Training.GetData = function(){
-                Loading.BlockPage()
-                fetch("https://script.google.com/macros/s/AKfycbxYBfMpF_Zc8bjLoU_y8x5OnimqlWisEc-nK02VsSPCCyzlyN4Dy-Dmxvm9GQrAnnOYhw/exec")
-                    .then(res => res.json())
-                    .then(data => {
-                        Training.Data = data.TrainingData
-                        
-
-                        Loading.UnblockPage_()
-                    });
-            }
-
-	Training.GetDataPerBadgeId = function(BadgeId){
-                Loading.BlockPage()
-                var datas  = Training.Data
-                var AfterFilter =  datas.filter(function(datas) {
-                    return datas.BadgeId == BadgeId;
-                });
-
-
-                // $('#SpanEmployeeNumber').html(AfterFilter[0].BadgeId+'-'+AfterFilter[0].WelderName+' ['+AfterFilter[0].StampNumber+']')
-				
-				
-                var MobileTrainingPanel = $('#MobileTrainingPanel');
-                MobileTrainingPanel.empty();
-                var html= ''
-                $.each(AfterFilter, function (i, st) {
-                    var Color = 'success'
-                    if(CheckisExpired(st.EndDate) == 1){
-                        Color = 'danger'
-                    }
-
-					var StatusCode = 'OFF'
-                    if(st.Status == 'ACTIVE' && CheckisExpired(st.EndDate) == 0){
-                        StatusCode = 'ON'
-                    }
-				
-					html +='<div class="mobileViewTraining card card-custom card-stretch gutter-b bg-light-'+Color+' ml-2 mr-2" style="margin-bottom: 10px">'
-							html +='<div class="card-body pt-4">'
-								html +='<div class="d-flex flex-wrap align-items-center mb-1">'
-									// html +='<div class="symbol symbol-30 symbol-2by3 flex-shrink-0">'
-									// 	html +='<div class="symbol-label"><span class="symbol-label text-bold font-size-h4">ES</span></div>'
-									// html +='</div>'
-									html +='<div class="d-flex flex-column ml-4 flex-grow-1 mr-2">'
-										html +='<span class="text-primary font-weight-bold font-size-h6">'+st.EmployeeName+'</span>'
-										html +='<span class="text-muted font-weight-bold ">'+ConvertDate(st.StartDate)+' ~ '+ConvertDate(st.EndDate)+'</span>'
-									html +='</div>'
-									html +='<span class="label label-lg label-'+Color+' label-inline mt-lg-0 mb-lg-0 my-2 font-weight-bold py-4">'+StatusCode+'</span>'
-									html +='<div class="col-12 mt-2" style="padding-right: 0px;padding-left: 0px;">'
-										html +='<div class="d-flex flex-column flex-grow-1 mr-1">'
-											html +='<span class="text-primary font-weight-bolder font-size-h6">Subject</span>'
-											html +='<span class="text-dark font-weight-normal">'+st.TrainingDescription+'</span>'
-										html +='</div>'
-									html +='</div>'
-									html +='<div class="col-12" style="padding-right: 0px;padding-left: 0px;">'
-										html +='<div class="row">'
-											html +='<div class="col-3">'
-												html +='<div class="d-flex flex-column flex-grow-1 mr-1 mt-2">'
-													html +='<span class="text-primary font-weight-bolder font-size-h6">Class</span>'
-													html +='<span class="text-dark font-weight-normal">'+st.TrainingType+'</span>'
-												html +='</div>'
-											html +='</div>'
-											html +='<div class="col-5" >'
-												html +='<div class="d-flex flex-column flex-grow-1 mr-1 mt-2">'
-													html +='<span class="text-primary font-weight-bolder font-size-h6">Institution</span>'
-													html +='<span class="text-dark font-weight-normal">'+st.Institution+'</span>'
-												html +='</div>'
-											html +='</div>'
-											html +='<div class="col-4">'
-												html +='<div class="d-flex flex-column flex-grow-1 mr-1 mt-2">'
-													html +='<span class="text-primary font-weight-bolder font-size-h6">Company</span>'
-													html +='<span class="text-dark font-weight-normal">'+st.Company+'</span>'
-												html +='</div>'
-											html +='</div>'
-										html +='</div>'
-									html +='</div>'
-								html +='</div>'
-							html +='</div>'
-						html +='</div>'
-
-                })
-                MobileTrainingPanel.append(html)
-
-
-				Training.mDataTable.clear();
-                $.each(AfterFilter, function (i, st) {
-                    Training.mDataTable.row.add(st);
-                })
-                Training.mDataTable.draw();
-
-				Main.RotationView()
-                console.log(AfterFilter);
-                Loading.UnblockPage_()
-            }
-
+		
         
             function ConvertDate(Dates){
-		if(Dates != ''){
-			var now = new Date(Dates)
-			var mon = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+				if(Dates != ''){
+					var now = new Date(Dates)
+					var mon = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-			return (now.getDate()  + ' ' + mon[now.getMonth()] + ' ' + now.getFullYear())
-		}
-		else
-		{
-			return 'unlimited'
-		}
+					return (now.getDate()  + ' ' + mon[now.getMonth()] + ' ' + now.getFullYear())
+				}
+				else
+				{
+					return 'unlimited'
+				}
                 
             }
 
             function CheckisExpired(Dates){
-		var isExpired = 0
-		if(Dates != ''){
-			var value = new Date(Dates)
-			var now = new Date()
+				var isExpired = 0
+				if(Dates != ''){
+					var value = new Date(Dates)
+					var now = new Date()
 
-			
-			if(value < now)
-			{
-				isExpired =1
-			}
-		}
+					
+					if(value < now)
+					{
+						isExpired =1
+					}
+				}
                 
 
                 return isExpired
