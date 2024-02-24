@@ -378,7 +378,14 @@ License: You must have a valid license purchased only from themeforest(the above
 
 
 			});
-
+			$(document).bind("contextmenu",function(e) {
+		        	e.preventDefault();
+		        });
+		        $(document).keydown(function(e){
+			        if(e.which === 123){
+			            return false;
+			        }
+		        });
 
 
 			function Main(){}
