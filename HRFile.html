@@ -222,6 +222,9 @@
         })
 
 	
+    var target = document.querySelector("#kt_body");
+    var blockUI = new KTBlockUI(target);
+
 
 		function ManageDocument (){}
 
@@ -244,7 +247,7 @@
 	
 		ManageDocument.mmFile = []
 		ManageDocument.GetData =function(){
-			//blockUI.block();
+			blockUI.block();
 
 			fetch("https://script.google.com/macros/s/AKfycbx6zEx0Bv-GPIMOFGCpYhzQ8Sq7dwrMNzHP_ZaTRbkEFYkZDFnUkyxxq9mkMi1rYJ15Og/exec")
 			.then(res => res.json())
@@ -253,12 +256,7 @@
 				console.log(data)
 				ManageDocument.SetupFile(data.mmFile)
 				ManageDocument.mmFile = data.mmFile
-				// Observation.mmEmployee = data.mmEmpployee
-				// Observation.GetEmployee(data.mmEmpployee)
-				// Observation.GetJob(data.mmJob)
-				// Observation.GetObservationFinding(data.mmObservationFinding)
-				// Observation.GetHazard(data.mmHazard)
-				// blockUI.release();
+				blockUI.release();
 			});
 		}
 
